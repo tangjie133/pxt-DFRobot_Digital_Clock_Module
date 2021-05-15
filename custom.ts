@@ -189,8 +189,8 @@ namespace custom {
      * @param second 设置秒参数, eg:30
      */
     //% block="set second %second"
-    //% weigh=91
     //% second.min=0 second.max=59
+    //% weight=91
     export function setSecond(second:number):void{
         let buffer = pins.createBuffer(2);
         buffer[0]=0x00;
@@ -203,9 +203,10 @@ namespace custom {
      * @param minute 分钟参数, eg:30
      * @param second 秒参数, eg:30
      */
-    //%block="set %mystatic minute %minute second %second"
+    //%block="set count down %mystatic minute %minute second %second"
     //% minute.min=0 minute.max=99
     //% second.min=0 second.max=59
+    //%weight=90
     export function countdown(mystatic:MyStatic, minute:number, second:number):void{
         let buffer = pins.createBuffer(4);
         buffer[0]=0xA0;
@@ -217,6 +218,8 @@ namespace custom {
     /**
      * TODO:获取倒计时状态
      */
+    //%block="get the countdown status"
+    //%weight=89
     export function getcountdownStatic():number{
         pins.i2cWriteNumber(addr, 0XA0, NumberFormat.Int8LE);
         basic.pause(50);
@@ -228,9 +231,10 @@ namespace custom {
      * @param minute 分钟参数, eg:30
      * @param second 秒参数, eg:30
      */
-    //%block="set %mystatic minute %minute second %second"
+    //%block="set positive timing %mystatic minute %minute second %second"
     //% minute.min=0 minute.max=99
     //% second.min=0 second.max=59
+    //%weight=88
     export function countup(mystatic:MyStatic, minute:number, second:number):void{
         let buffer = pins.createBuffer(4);
         buffer[0]=0X07;
@@ -242,6 +246,8 @@ namespace custom {
     /**
      * TODO:获取正计时状态
      */
+    //%block="gets the positive timing status"
+    //%weight=87
     export function getcountupStatic():number{
         pins.i2cWriteNumber(addr, 0X07, NumberFormat.Int8LE);
         basic.pause(50);
