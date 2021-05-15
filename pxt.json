@@ -1,5 +1,5 @@
 {
-    "name": "pxt-DFRobot_Digital_Clock_Module",
+    "name": "DFRobot_Digital_Clock_Module",
     "version": "0.0.1",
     "description": "",
     "dependencies": {
@@ -11,6 +11,7 @@
         "main.blocks",
         "main.ts",
         "README.md",
+        "_locales/zh-cn/DFRobot_Digital_Clock_Module-strings.json",
         "custom.ts"
     ],
     "testFiles": [
