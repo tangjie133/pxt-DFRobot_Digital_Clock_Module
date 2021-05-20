@@ -20,6 +20,7 @@
     "custom.countdown|block": "设置倒计时 %mystatic 分 %minute 秒 %second",
     "custom.getcountdownStatic|block": "获取倒计时状态",
     "custom.countup|block": "设置正计时 %mystatic 分 %minute 秒 %second",
-    "custom.getcountupStatic|block":"获取正计时状态"
+    "custom.getcountupStatic|block":"获取正计时状态",
+    "custom|block":"数码时钟模块"
 
 }

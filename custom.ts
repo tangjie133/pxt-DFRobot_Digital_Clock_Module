@@ -27,9 +27,9 @@ enum MyStatic{
 /**
  * 时钟模块图形化模块
  */
-//% weight=100 color=#0fbc11 icon="\uf017"
+//% weight=100 color=#0fbc11 icon="\uf017" block="Digital clock module"
 namespace custom {
-    let addr = 0x16;
+    let addr = 0x18;
     /**
      * TODO: 设置时钟模块的年月日时分秒
      * @param year   设置年参数, eg: 2021
